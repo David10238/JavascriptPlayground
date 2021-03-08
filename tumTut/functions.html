@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <h1 id="header">Hello</h1>
+        <button onclick = "redClick()">Red</button>
+        <button onclick = "greenClick()">Green</button>
+
+        <script>
+            var header = document.getElementById("header");
+
+            function redClick(){
+                header.innerHTML = "RED";
+                header.style.color = "red"
+                console.log("RED CLICKED");
+            }
+
+            function greenClick(){
+                header.innerHTML = "GREEN";
+                header.style.color = "green"
+                console.log("GREEN CLICKED");
+            }
+
+            function add(a, b){
+                return a + b;
+            }
+
+            var x = add(5, 5);
+            var y = add(10, 10);
+
+            console.log(x);
+            console.log(y);
+            
+        </script>
+    </body>
+</html>

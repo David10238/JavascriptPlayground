@@ -1,0 +1,54 @@
+
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <h1 id="header">Hello</h1>
+        <script>
+            let ourDog = {
+                "name": "Camper",
+                "legs" : 4,
+                "needs bracket" : 2
+            };
+
+            ourDog.legs = 3;
+            ourDog[name] = "Fred";
+            ourDog['needs bracket'] = 12;
+
+            let canBeUsedAsMap = {
+                12:"Twelve",
+                13:"Thirteen"
+            };
+
+            canBeUsedAsMap["five"] = 5; // add to object
+            console.log(canBeUsedAsMap.five);
+            delete canBeUsedAsMap.five; // deletes object property
+            console.log(canBeUsedAsMap);
+
+            var hasProperty = canBeUsedAsMap["someData"];
+
+            const complex = {
+                "outer":{
+                    "nested":2
+                }
+            };
+
+            console.log(complex.outer.nested);
+
+            console.log("")
+            const voxel = {x:13, y:1, z:3};
+            const {x : a, y : b, z : c } = voxel; // deconstructing an object
+            console.log(voxel)
+            console.log(a, b, c);
+
+            // using deconstruction to pass an object to function
+            function doRange({max, min}){
+                console.log(max, min);
+            }
+
+            doRange({
+                max:1,
+                min:-24
+            });
+        </script>
+    </body>
+</html>

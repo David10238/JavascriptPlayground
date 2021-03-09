@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <h1 id="header">Hello</h1>
+        <script>
+            const functionDeclaration = function(){
+                console.log("Hello");
+            };
+
+            const arrowDeclaration = ()=>{
+                console.log("World");
+            };
+            
+            const shortDecl = a=>console.log(a)
+            
+            functionDeclaration();
+            arrowDeclaration();
+            shortDecl("aeg");
+
+            const squaredList = [4, 2, 4].map(num => num * num);
+            console.log(squaredList);
+
+            //rest operator
+            const sum = (... args) => args.reduce((a, b) => a + b, 0);
+            console.log(sum(1,2,3));
+        </script>
+    </body>
+</html>

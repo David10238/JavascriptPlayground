@@ -1,0 +1,51 @@
+
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <h1 id="header">Hello</h1>
+        <script>
+
+            var fooVar = "";
+            // let fooVar = 4 // can't redeclare with let
+            var fooVar = 3; // can redeclare with var
+
+
+            const fooConst = 3;
+            //fooConst = 1; // can't reassign with const
+            // const fooConst = 2; // can't redeclare with const
+
+            // scope
+            function scopeVar(){
+                var i = "function scope"
+                if(true){
+                    var i = "block scope"
+                    console.log("Block scope is: ", i);
+                }
+                console.log("Function scope is: ", i); // stays on block scope
+            }
+            function scopeLet(){
+                let i = "function scope"
+                if(true){
+                    let i = "block scope"
+                    console.log("Block scope is: ", i);
+                }
+                console.log("Function scope is: ", i); // stays on block scope
+            }
+            scopeLet();
+            console.log("");
+            scopeVar();
+            console.log("");
+
+            const s = [1,2,3];
+            s.push(4);// can mutate const array
+            // s=[2]; // can't reassign const array
+
+            const MATH_CONSTANTS = {
+                PI:3.14
+            }
+            // can't change internal values
+            Object.freeze(MATH_CONSTANTS) // frozen
+
+        </script>
+    </body>
+</html>

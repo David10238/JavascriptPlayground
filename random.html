@@ -1,0 +1,22 @@
+
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <h1 id="header">Hello</h1>
+        <script>
+            function randomNumber(){
+                return Math.random() // between 0 and 1
+            }
+            console.log(randomNumber())
+            let wholeNumberBetween0and19 = Math.floor(Math.random()*20);
+            console.log(wholeNumberBetween0and19);
+
+            function randomRange(min, max){
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            console.log(randomRange(145, 152));
+
+        </script>
+    </body>
+</html>

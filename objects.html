@@ -49,6 +49,38 @@
                 max:1,
                 min:-24
             });
+
+
+            //simple fields
+            const creatPerson = (name, age) => ({name, age});
+            console.log(creatPerson("Freddy", 124))
+
+
+            //class
+
+            const bicycle = {
+                gear: 2,
+                setGear(newGear) {
+                    this.gear = newGear
+                }
+            };
+            bicycle.setGear(3);
+            console.log(bicycle.gear);
+
+            //classes
+            class SpaceShuttle {
+                constructor(targetPlanet){
+                    this.targetPlanet = targetPlanet;
+                }
+
+                greet(){
+                    console.log(`Hello people of ${this.targetPlanet}`);
+                }
+            }
+
+            var zeus = new SpaceShuttle("Mars");
+            console.log(zeus.targetPlanet);
+            zeus.greet();
         </script>
     </body>
 </html>
